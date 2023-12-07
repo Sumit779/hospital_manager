@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hospital Management System</title>
+  <script src="https://kit.fontawesome.com/83e62f3a9f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container mt-3">
+    <h1 class="text-center text-primary">
+      <i class="fas fa-hospital-alt"></i> Hospital Management System
+    </h1>
+
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a id="doc-tab" href="#" class="nav-link active">Doctors</a>
+      </li>
+      <li class="nav-item">
+        <a id="pat-tab" href="#" class="nav-link">Patients</a>
+      </li>
+    </ul>
+
+    <div id="tabContent" class="tab-content mt-3">
+      <div class="tab-pane fade active show" id="doc-tab-content">
+        <form id="doc-form">
+          <div class="form-group">
+            <label for="Name">Name</label>
+            <input type="text" class="form-control" placeholder="Name" id="doc-name">
+          </div>
+          <div class="form-group">
+            <label for="Age">Age</label>
+            <input type="text" class="form-control" placeholder="Age" id="doc-age">
+          </div>
+          <div class="form-group">
+            <label for="Qualification">Qualification</label>
+            <input type="text" class="form-control" placeholder="Qualification" id="qualification">
+          </div>
+          <div class="form-group">
+            <label for="Experience">Experience</label>
+            <input type="text" class="form-control" placeholder="Experience" id="experience">
+          </div>
+          <button type="submit" id="doc-submit" class="btn btn-primary">Add Doctor</button>
+        </form>
+
+        <table class="table table-default mt-4">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Qualification</th>
+              <th>Experience</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody id="doc-list">
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tab-pane fade" id="pat-tab-content">
+        <form id="pat-form">
+          <div class="form-group">
+            <label for="Name">Name</label>
+            <input type="text" class="form-control" placeholder="Name" id="pat-name">
+          </div>
+          <div class="form-group">
+            <label for="Age">Age</label>
+            <input type="text" class="form-control" placeholder="Age" id="pat-age">
+          </div>
+          <div class="form-group">
+            <label for="Disease">Disease</label>
+            <input type="text" class="form-control" placeholder="Disease" id="disease">
+          </div>
+          <div class="form-group">
+            <label for="Gender">Gender</label>
+            <select class="form-control" id="gender">
+              <option value="default">Select</option>
+              <option value="Male">Male</option>
+              <option value="Male">Female</option>
+              <option value="Transgender">Transgender</option>
+            </select>
+          </div>
+          <button type="submit" id="pat-submit" class="btn btn-primary">Add Patient</button>
+        </form>
+
+        <table class="table table-default mt-4">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Disease</th>
+              <th>Gender</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody id="pat-list">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
